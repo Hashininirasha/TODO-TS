@@ -66,7 +66,7 @@ class TodoItem {
         this.ulElement.insertAdjacentElement('afterbegin', this.liElement);
     }
     display() {
-        this.ulElement.querySelector('h1').textContent = this.input;
+        this.ulElement.querySelector('h3').textContent = this.input;
         this.ulElement.querySelector('.del').id = this.id;
         this.ulElement.querySelector('.edit').id = this.id;
     }
@@ -159,3 +159,19 @@ class TodoInput {
     }
 }
 const todo = new TodoInput();
+class CheckboxManager {
+    constructor() {
+        this.checkboxes = document.querySelectorAll('.checkbox');
+        this.checkedCountElement = document.getElementById('checked-count');
+    }
+    displayCheckedCount() {
+        let checkedCount = 0;
+        this.checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                checkedCount++;
+            }
+        });
+        this.checkedCountElement.innerText = checkedCount.toString();
+    }
+}
+const checkboxManager = new CheckboxManager();

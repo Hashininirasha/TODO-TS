@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color:blueviolet
+}
+
+.search-form {
+    width: clamp(280px, 90vw, 400px);
+    height: 50px;
+    display: flex;
+}
+.add-form input,
+.add-form button {
+    flex-basis: 70%;
+    background-color:aliceblue;
+    outline: none;
+    border: none;
+    color:#0b0b0b;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+    border-radius: .5rem 0 0 .5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+.add-form button {
+    flex-basis: 30%;
+    border-left: 1px solid;
+    border-radius: 0 .5rem .5rem 0;
+    cursor: pointer;
+    transition: 200ms ease-in-out background-color;
+}
+.add-form button:hover { background-color:rgba(255, 255, 255, .7) }
+.add-form button:active { transform: scale(.93); }
+
+.card {
+    width: clamp(380px, 110vw, 500px);
+    background-color:aliceblue;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, .1);
+    margin-top: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.avatar {
+    width: 100px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+    outline: 1px solid #0b0b0b;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h3 {
+    display: inline;
+    padding: 30px;
+  }
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5cb85c;
+}
+
+label {
+  color: #333;
+  cursor: pointer;
+}
+.op {
+    display: inline;
+    padding-right: 80px;
+    
+  }
+
+.del {
+    background-color: #dc2f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+  }
+  
+.del:hover {
+    background-color: #0b0b0b;
+  }
+
+.edit {
+    background-color: #2fdc55;
+    color: #fff;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.edit:hover {
+    background-color: #0b0b0b;
+  }
+
+

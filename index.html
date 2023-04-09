@@ -4,21 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
     <script src="dest/script.js" defer></script>
-    <title>Document</title>
+    <title>TODO App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <form>
-  <input type='text' placeholder='Add Todo'>
+
+    <div class="container">
+      <div class="add-form">
+  <input type='text' placeholder='Add your new Todo'>
   <button type='submit' class="addTodo">Add</button>
+  </div>
+  </div>
   </form>
-  <template>
-    <li>
-      <h1></h1>
-      <button class='del'>Delete</button>
-      <button class='edit'>Edit</button>
-    </li>
+  
+  <div class="card">
+    <div class="avatar">
+        <img src="https://th.bing.com/th/id/OIP.ejmNu1wXN1F8o-3WgQpbLwHaHa?pid=ImgDet&rs=1" alt="">
+
+      </div>
+
+<br>
+      <div class="lists">
+      
+    <template>
+      <div>
+        <input type="checkbox" class="checkbox" onchange="checkboxManager.displayCheckedCount()">   
+        <h3></h3>
+       
+      <div class="op">
+        <button class='edit'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+     
+      <button class='del'><i class="fa fa-trash-o" aria-hidden="true"></i>
+      </button>
+      </div>
+ <br>
+ <br>
   </template>
   <ul></ul>
+
+</div>
+      
+    </div>
+
+
 </body> 
 </html>

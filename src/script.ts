@@ -75,6 +75,7 @@ class TodoItem {
   ) {
     this.tempElement = document.querySelector('template')!;
     this.ulElement = document.querySelector('ul')! as HTMLUListElement;
+    
 
     const importedHtml = document.importNode(this.tempElement.content, true);
     this.liElement = importedHtml.firstElementChild as HTMLLIElement;
@@ -90,7 +91,7 @@ class TodoItem {
   }
 
   private display() {
-    this.ulElement.querySelector('h1')!.textContent = this.input;
+    this.ulElement.querySelector('h3')!.textContent = this.input;
     this.ulElement.querySelector('.del')!.id = this.id;
     this.ulElement.querySelector('.edit')!.id = this.id;
   }
@@ -204,3 +205,26 @@ class TodoInput {
 }
 
 const todo = new TodoInput();
+
+
+class CheckboxManager {
+  private checkboxes: NodeListOf<HTMLInputElement>;
+  private checkedCountElement: HTMLSpanElement;
+
+  constructor() {
+    this.checkboxes = document.querySelectorAll('.checkbox');
+    this.checkedCountElement = document.getElementById('checked-count') as HTMLSpanElement;
+  }
+
+  public displayCheckedCount() {
+    let checkedCount = 0;
+    this.checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        checkedCount++;
+      }
+    });
+    this.checkedCountElement.innerText = checkedCount.toString();
+  }
+}
+
+const checkboxManager = new CheckboxManager();
