@@ -116,6 +116,12 @@ class TodoList {
         document.querySelector('ul').innerText = '';
         for (let todo of this.todoItems) {
             new TodoItem(todo.id, todo.input, this.todoItems);
+            const numberOfElements = this.todoItems.length;
+            // console.log("Number of Items" + numberOfElements); 
+            const myParagraph = document.getElementById('myParagraph');
+            if (myParagraph !== null) {
+                myParagraph.innerHTML = `Total Number of Tasks: ${numberOfElements}`;
+            }
         }
     }
 }

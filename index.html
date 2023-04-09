@@ -17,19 +17,27 @@
       <div class="add-form">
   <input type='text' placeholder='Add your new Todo'>
   <button type='submit' class="addTodo">Add</button>
+ 
   </div>
   </div>
   </form>
-  
+
+      <div>
+      <button class='Data'><p id="myParagraph">Total Number of Tasks <i class="fa fa-thumb-tack" aria-hidden="true"></i></p>
+
+      </button>
+      <button class='Data'><p id="myParagraph">Number of Completed Tasks <i class="fa fa-check" aria-hidden="true"></i>
+      </p>
+
+      </button>
+    </div>
+
   <div class="card">
     <div class="avatar">
         <img src="https://th.bing.com/th/id/OIP.ejmNu1wXN1F8o-3WgQpbLwHaHa?pid=ImgDet&rs=1" alt="">
-
-      </div>
-
-<br>
-      <div class="lists">
-      
+    </div>
+      <br>
+    <div class="lists">
     <template>
       <div>
         <input type="checkbox" class="checkbox" onchange="checkboxManager.displayCheckedCount()">   
@@ -42,15 +50,14 @@
       <button class='del'><i class="fa fa-trash-o" aria-hidden="true"></i>
       </button>
       </div>
- <br>
- <br>
+      <br>
+      <br>
   </template>
   <ul></ul>
 
-</div>
+  </div>
       
     </div>
-
 
 </body> 
 </html>
