@@ -117,7 +117,6 @@ class TodoList {
         for (let todo of this.todoItems) {
             new TodoItem(todo.id, todo.input, this.todoItems);
             const numberOfElements = this.todoItems.length;
-            // console.log("Number of Items" + numberOfElements); 
             const myParagraph = document.getElementById('myParagraph');
             if (myParagraph !== null) {
                 myParagraph.innerHTML = `Total Number of Tasks: ${numberOfElements}`;
@@ -166,18 +165,14 @@ class TodoInput {
 }
 const todo = new TodoInput();
 class CheckboxManager {
-    constructor() {
-        this.checkboxes = document.querySelectorAll('.checkbox');
-        this.checkedCountElement = document.getElementById('checked-count');
-    }
     displayCheckedCount() {
-        let checkedCount = 0;
-        this.checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                checkedCount++;
-            }
-        });
-        this.checkedCountElement.innerText = checkedCount.toString();
+        const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+        let checkedCount = checked.length;
+        console.log('checkedCount', checkedCount);
+        const myParagraph1 = document.getElementById('myParagraph1');
+        if (myParagraph1 !== null) {
+            myParagraph1.innerHTML = `Number of Completed Tasks: ${checkedCount}`;
+        }
     }
 }
 const checkboxManager = new CheckboxManager();
