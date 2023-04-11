@@ -49,6 +49,6 @@ When we add tasks
 
 Validation 
 
-![Screenshot (851)](https://user-images.githubusercontent.com/52965775/231115440-91ca0f38-ae03-4c88-8eb2-4abd9e2c44b4.png)
+![Screenshot (850)](https://user-images.githubusercontent.com/52965775/231117839-62d5b794-f38f-4f86-aff1-ac4bcdf8ed23.png)
 
 
