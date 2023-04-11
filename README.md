@@ -30,6 +30,7 @@ npm start
 ## How to use
 
 Download the example [or clone the repo](https://github.com/Hashininirasha/TODO-TS.git):
+
 [Click this link to get live experience](https://hashininirasha.github.io/TODO-TS/):
 
 # How it works
