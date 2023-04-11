@@ -134,10 +134,11 @@ label {
 }
 
 .Data{
+    display: inline;
     background-color: blueviolet;
     color: #fff;
     border: none;
-    padding: 10px 17px;
+    padding: 0px 17px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
