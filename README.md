@@ -2,15 +2,19 @@
 
 ## What is a ToDo App?
 
-A todo app, short for "to-do list app," is a software application designed to help users organize, manage, and prioritize their tasks and activities. It typically allows users to create and categorize tasks, set deadlines or reminders, and mark tasks as completed when finished. Todo apps are often used for personal productivity, task management, project planning, and team collaboration. There are many different todo apps available for various platforms, such as web-based, mobile, and desktop applications. It's provide these features.
+A todo app, short for "to-do list app," is a software application designed to help users organize, manage, and prioritize their tasks and activities. It typically allows users to create and categorize tasks, set deadlines or reminders, and mark tasks as completed when finished. Todo apps are often used for personal productivity, task management, project planning, and team collaboration. There are many different todo apps available for various platforms, such as web-based, mobile, and desktop applications. This application provide these features.
 
 ✔ User can add new task using add button
+
 ✔ User can Edit their tasks
+
 ✔ User can Delete their tasks
+
 ✔ User can see their total tasks
+
 ✔ User can identify their completed tasks
 
-## Used Technologies
+## Used Technologies  ![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)
 
 1. HTML
 2. CSS
@@ -29,11 +33,11 @@ npm start
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/Hashininirasha/TODO-TS.git):
+Download the example [or clone the repo](https://github.com/Hashininirasha/TODO-TS.git)
 
-[Click this link to get live experience](https://hashininirasha.github.io/TODO-TS/):
+[Click this link to get live experience](https://hashininirasha.github.io/TODO-TS/)
 
-# How it works
+## How it works
 
 Starting View
 
