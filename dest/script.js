@@ -34,6 +34,10 @@ class AppState {
         new TodoList(this.todos, 'Finished');
     }
     addTodo(id, input, status) {
+        if (this.todos.some(todo => todo.input === input)) {
+            alert(`The task "${input}" is already in the list.`);
+            return;
+        }
         const todoItem = new TodoStructure(id, input, status);
         this.todos.push(todoItem);
         this.getTodoList();
@@ -164,15 +168,13 @@ class TodoInput {
     }
 }
 const todo = new TodoInput();
-class CheckboxManager {
-    displayCheckedCount() {
-        const checked = document.querySelectorAll('input[type="checkbox"]:checked');
-        let checkedCount = checked.length;
-        console.log('checkedCount', checkedCount);
-        const myParagraph1 = document.getElementById('myParagraph1');
-        if (myParagraph1 !== null) {
-            myParagraph1.innerHTML = `Number of Completed Tasks: ${checkedCount}`;
-        }
+function displayCheckedCount() {
+    const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+    let checkedCount = checked.length;
+    console.log('checkedCount', checkedCount);
+    const myParagraph1 = document.getElementById('myParagraph1');
+    if (myParagraph1 !== null) {
+        myParagraph1.innerHTML = `Number of Completed Tasks: ${checkedCount}`;
     }
 }
-const checkboxManager = new CheckboxManager();
+const checkboxManager = { displayCheckedCount };

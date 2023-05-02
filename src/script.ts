@@ -1,6 +1,6 @@
 enum STATUS {
   Pending,
-  Finished,
+  Finished, 
 }
 
 type dType = string;
@@ -46,17 +46,24 @@ class AppState {
 
   
   addTodo(id: string, input: string, status: STATUS) {
+    if (this.todos.some(todo => todo.input === input)) {
+      alert(`The task "${input}" is already in the list.`);
+      return;
+    }
+
     const todoItem = new TodoStructure(id, input, status);
     this.todos.push(todoItem);
     this.getTodoList();
-
-    
   }
 
+
+  
   set Todos(todoItems: TodoStructure[]) {
     this.todos = [...todoItems];
     this.getTodoList();
   }
+
+
 
   get Todos() {
     return this.todos;
@@ -152,7 +159,7 @@ class TodoList {
     
  
     for (let todo of this.todoItems) {
-  
+
       new TodoItem(todo.id, todo.input, this.todoItems);
 
       const numberOfElements = this.todoItems.length;
@@ -218,27 +225,23 @@ const todo = new TodoInput();
 
 
 
-class CheckboxManager {
-  
-  public displayCheckedCount() {
+function displayCheckedCount() {
 
-    const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+  const checked = document.querySelectorAll('input[type="checkbox"]:checked');
 
-    let checkedCount = checked.length;
+  let checkedCount = checked.length;
 
-    console.log('checkedCount', checkedCount)
+  console.log('checkedCount', checkedCount)
 
 
-    const myParagraph1 = document.getElementById('myParagraph1');
-    if (myParagraph1 !== null) {
+  const myParagraph1 = document.getElementById('myParagraph1');
+  if (myParagraph1 !== null) {
     myParagraph1.innerHTML = `Number of Completed Tasks: ${checkedCount}`;
-      }
-
   }
+
 }
 
-const checkboxManager = new CheckboxManager();
-
+const checkboxManager = { displayCheckedCount };
 
 
 
